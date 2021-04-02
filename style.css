@@ -1,0 +1,130 @@
+:root {
+  --white-color: #fff;
+  --main-theme-color: hsl(179, 62%, 43%);
+  --lighter-theme-color: hsl(179, 62%, 48%);
+  --highlight-color: hsl(71, 73%, 54%);
+  --grey-color: hsl(218, 22%, 67%);
+  --light-grey-color: hsl(204, 43%, 93%);
+}
+
+body {
+  margin: 0;
+  background-color: var(--light-grey-color);
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  min-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+}
+
+.deck {
+  max-width: 642px;
+  border-radius: .25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.deck__card {
+  padding: 2rem;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.deck__card:first-child {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+}
+
+.deck__card--white {
+  background-color: var(--white-color);
+}
+
+.deck__card--lighter {
+  background-color: var(--lighter-theme-color);
+  color: var(--white-color);
+  min-width: 50%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.deck__card--darker {
+  background-color: var(--main-theme-color);
+  color: var(--white-color);
+}
+
+.card__title {
+  margin: 0;
+  font-weight: 700;
+}
+
+.card__title--master {
+  font-size: 1.325rem;
+  color: var(--main-theme-color);
+}
+
+.card__title--regular {
+  font-size: 1.1rem;
+}
+
+.card__text--grey {
+  color: var(--grey-color);
+  line-height: 1.8;
+}
+
+.card__text--highlight {
+  color: var(--highlight-color);
+  font-weight: 700;
+}
+
+.card__text--transparent-50 {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.card__text--transparent-70 {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.card__list {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.card__list--transparent-70 {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.card__price {
+  margin-right: 0.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.card__button {
+  height: 3.5rem;
+  width: 100%;
+  border-radius: .25rem;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  color: var(--white-color);
+  text-decoration: none;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 1rem 0.3rem;
+          box-shadow: rgba(0, 0, 0, 0.15) 0 0 1rem 0.3rem;
+}
+
+.card__button--highlight {
+  background-color: var(--highlight-color);
+  font-weight: 700;
+}
+/*# sourceMappingURL=style.css.map */
