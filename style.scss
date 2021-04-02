@@ -9,8 +9,6 @@
   --light-grey-color: hsl(204, 43%, 93%);
 }
 
-$highlight-color: var(--highlight-color);
-
 html {
   font-family: 'Karla', sans-serif;
   font-size: 16px;
@@ -26,7 +24,6 @@ body {
 }
 
 @mixin box-highlight($amount: 0%) {
-  //background-color: lighten(hsl(71, 73%, 54%), $amount);
   background-color: color.scale(hsl(71, 73%, 54%), $lightness: $amount);
   font-weight: 700;
 }
@@ -50,7 +47,7 @@ body {
 }
 
 .deck {
-  min-height: 465px;
+  min-height: 485px;
   max-width: 642px;
   border-radius: .5rem;
   overflow: hidden;
@@ -65,15 +62,15 @@ body {
     line-height: 22px;
     flex-grow: 1;
     box-sizing: border-box;
-    // transition: ease 6s line-height;
+    display: grid;
 
     &:first-child {
       flex-grow: 2;
-      min-height: 212px;
+      min-height: 229px;
     }
 
     &:nth-child(2) {
-      min-height: 253px;
+      min-height: 256px;
     }
 
     &--white {
@@ -129,8 +126,9 @@ body {
   }
 
   &__list {
-    min-height: 135px;
+    min-height: 154px;
     padding-left: 0;
+    margin-bottom: 0;
     list-style-type: none;
 
     &--transparent-70 {
@@ -170,4 +168,8 @@ body {
 }
 footer {
   min-height: 51px;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
 }
